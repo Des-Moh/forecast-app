@@ -16,11 +16,12 @@
   <body>
     <div class="weather-caster">
       <header>
-        <form class="search-form">
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a city..."
             required
+            id="search-form-input"
             class="search-form-input"
           />
           <input type="submit" value="search" class="search-form-button" />
@@ -29,23 +30,24 @@
       <main>
         <div class="app-data">
           <div>
-            <h1 class="app-city">Pretoria</h1>
+            <h1 class="app-city" id="city">Pretoria</h1>
             <p class="app-details">
               Saturday 22:50, Partly cloudy
               <br />
               Humidity <strong> 68%,</strong> Wind: <strong>8km/h</strong>
             </p>
           </div>
-          <div class="app-temperature-container"></div>
+          <div class="app-temperature-container">
+            <div class="app-temperature-value">18°C</div>
 
-          <div class="app-temperature-value">18°C</div>
-          
-            <img class="app-icon"
+            <img
+              class="app-icon"
               src="https://openmoji.org/data/color/svg/26C5.svg"
               width="18px"
+              alt="weather-icon"
             />
-          
-        
+          </div>
+        </div>
       </main>
 
       <footer>
@@ -65,4 +67,5 @@
       </footer>
     </div>
   </body>
+  <script src="src/index.js"></script>
 </html>
