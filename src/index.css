@@ -13,3 +13,70 @@ body {
   box-shadow: 10px 10px;
   border-radius: 20px;
 }
+
+.search-form-input {
+  background-color: skyblue;
+  border: none;
+  border-radius: 5px;
+  max-width: 90%;
+  padding: 15px;
+  font-size: 16px;
+}
+main {
+  padding: 30px;
+}
+
+.search-form-button {
+  background: rgb(19, 165, 213);
+  padding: 15px;
+  border: none;
+  margin-left: 3px;
+  border-radius: 5px;
+  color: black;
+  font-size: 16px;
+}
+footer {
+  border-bottom: 2px;
+  padding: 30px;
+  text-align: center;
+  font-size: 10px;
+}
+a {
+  color: rgb(19, 165, 213);
+}
+.app-data {
+  display: flex;
+  justify-content: space-between;
+}
+.app-city {
+  margin: 0;
+  font-size: 38px;
+  line-height: 48px;
+}
+.app-details {
+  font-size: 16px;
+  line-height: 25px;
+  color: grey;
+  font-weight: 500;
+}
+
+.app-details strong {
+  color: rgb(6, 2, 77);
+}
+.app-temperature-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.app-temperature-value {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+.app-icon {
+  font-size: 80px;
+  margin-top: 20px;
+  display: block;
+  width: 50px;
+  height: 50px;
+}
