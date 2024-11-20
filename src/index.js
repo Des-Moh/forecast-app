@@ -30,6 +30,13 @@ function updateWeather(response) {
 
   let timeElement = document.querySelector("#time");
   timeElement.innerHTML = `Last updated on ${day} at ${hours}:${minutes},`;
+
+  let iconElement = document.querySelector("#icon");
+  let iconUrl = response.data.condition.icon
+    ? response.data.condition.icon
+    : "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png";
+  iconElement.setAttribute("src", iconUrl);
+  iconElement.setAttribute("alt", description);
 }
 
 function searchCity(city) {
