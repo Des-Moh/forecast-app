@@ -55,3 +55,36 @@ function handleSearchSubmit(event) {
 
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener("submit", handleSearchSubmit);
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let options = { weekday: "short" };
+  return date.toLocaleDateString(undefined, options);
+}
+
+const forecastData = [
+  { day: "Tue", icon: "clear-sky-day.png", temp: "10° 33°" },
+  { day: "Wed", icon: "few-clouds-day.png", temp: "10° 33°" },
+  { day: "Thur", icon: "few-clouds-day.png", temp: "10° 33°" },
+  { day: "Fri", icon: "clear-sky-day.png", temp: "10° 33°" },
+  { day: "Sat", icon: "few-clouds-day.png", temp: "10° 33°" },
+];
+
+const forecastContainer = document.querySelector(".forecast");
+forecastContainer.innerHTML = forecastData
+  .map(
+    (forecast) => `
+  <div class="forecast-day">
+    <div class="forecast-date">${forecast.day}</div>
+    <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecast.icon}" class="cast-icon" alt="${forecast.day} weather" />
+    <div class="forecast-temperatures"><strong>${forecast.temp}</strong></div>
+  </div>
+`
+  )
+  .join("");
+
+setInterval(() => {
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => {});
+}, 3600000);
