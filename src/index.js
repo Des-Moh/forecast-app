@@ -63,11 +63,11 @@ function formatDay(timestamp) {
 }
 
 const forecastData = [
-  { day: "Tue", icon: "clear-sky-day.png", temp: "10° 33°" },
-  { day: "Wed", icon: "few-clouds-day.png", temp: "10° 33°" },
-  { day: "Thur", icon: "few-clouds-day.png", temp: "10° 33°" },
-  { day: "Fri", icon: "clear-sky-day.png", temp: "10° 33°" },
-  { day: "Sat", icon: "few-clouds-day.png", temp: "10° 33°" },
+  { day: "Tue", icon: "clear-sky-day.png", temp: "18° 32°" },
+  { day: "Wed", icon: "clear-sky-day.png", temp: "18° 30°" },
+  { day: "Thur", icon: "clear-sky-day.png", temp: "19° 31°" },
+  { day: "Fri", icon: "clear-sky-day.png", temp: "21° 33°" },
+  { day: "Sat", icon: "clear-sky-day.png", temp: "10° 33°" },
 ];
 
 const forecastContainer = document.querySelector(".forecast");
